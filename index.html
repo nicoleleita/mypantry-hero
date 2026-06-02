@@ -9,7 +9,8 @@
         header { background: linear-gradient(135deg, #FF6B35, #2ECC71); color: white; text-align: center; padding: 80px 20px; }
         h1 { font-size: 3.5em; margin: 0; }
         .tagline { font-size: 1.6em; margin: 20px 0; opacity: 0.95; }
-        .hero-img { max-width: 550px; width: 100%; height: 180px; object-fit: cover; border-radius: 100px; margin: 20px auto; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+        .hero-container { width: 100%; max-width: 500px; height: 150px; border-radius: 100px; overflow: hidden; margin: 20px auto; box-shadow: 0 8px 24px rgba(0,0,0,0.15); background-color: #fff; }
+        .hero-img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
         .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 60px 20px; max-width: 1200px; margin: auto; }
         .feature { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
         .feature h2 { color: #FF6B35; }
@@ -27,7 +28,9 @@
     <header>
         <h1>Coming Soon</h1>
         <p class="tagline">Waste less. Eat better. Save money.</p>
-        <img src="Landing-Page-Logo-My-Pantry-Hero.png" alt="My Pantry Hero – Turn your pantry into dinner" class="hero-img">
+         <div class="hero-container">
+          <img src="landing-page-logo-my-pantry-hero.png" alt="My Pantry Hero – Turn your pantry into dinner" class="hero-img">
+         </div>
 
     <section class="features">
         <div class="feature">
