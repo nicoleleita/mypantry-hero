@@ -42,8 +42,11 @@
     h1 { font-size: clamp(2.2em, 5.5vw, 3.6em); font-weight: 700; margin: 0 auto 14px; max-width: 15ch; }
     h1 .hl { color: var(--leaf); font-style: italic; }
     .tagline { font-size: 1.25em; opacity: 0.9; margin: 0 auto 34px; max-width: 46ch; }
-
-    .badges { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+ 
+    .badges { display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; }
+    .badge-img { display: inline-flex; align-items: center; transition: transform .15s ease; }
+    .badge-img:hover { transform: translateY(-2px); }
+    .badge-img img { height: 72px; width: auto; display: block; }
     .badge {
       display: inline-flex; align-items: center; gap: 10px;
       background: #0e3535; color: #fff; text-decoration: none;
@@ -51,19 +54,21 @@
       padding: 10px 18px; transition: transform .15s ease, background .15s ease;
     }
     .badge:hover { background: #0a2b2b; transform: translateY(-2px); }
+    .badge-soon { cursor: default; opacity: 0.75; padding: 8px 20px; min-height: 48px; }
+    .badge-soon:hover { background: #0e3535; transform: none; }
     .badge svg { width: 26px; height: 26px; fill: #fff; }
     .badge .lines { text-align: left; line-height: 1.2; }
     .badge .small { display: block; font-size: 0.7em; opacity: 0.8; }
     .badge .big { display: block; font-weight: 800; font-size: 1.05em; }
     .soon { margin-top: 16px; font-size: 0.95em; opacity: 0.75; }
-
+ 
     /* ---------- Sections ---------- */
     section { padding: 72px 20px; }
     .wrap { max-width: 1080px; margin: 0 auto; }
     .kicker { color: var(--sea); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85em; margin: 0 0 8px; }
     section h2 { font-size: clamp(1.7em, 3.5vw, 2.4em); margin: 0 0 10px; color: var(--ink-teal); }
     .lede { color: var(--muted); max-width: 60ch; margin: 0 0 44px; }
-
+ 
     /* How it works */
     .how { background: var(--mist); }
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
@@ -80,7 +85,7 @@
     }
     .step h3 { margin: 0 0 8px; font-size: 1.25em; color: var(--ink-teal); }
     .step p { margin: 0; color: var(--muted); }
-
+ 
     /* Features */
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     .feature {
@@ -89,7 +94,7 @@
     .feature .emoji { font-size: 1.6em; }
     .feature h3 { font-size: 1.1em; margin: 8px 0 6px; color: var(--ink-teal); }
     .feature p { margin: 0; color: var(--muted); font-size: 0.98em; }
-
+ 
     /* Screenshots */
     .shots { background: var(--ink-teal); }
     .shots h2, .shots .kicker { color: #fff; }
@@ -105,7 +110,7 @@
   overflow: hidden;
 }
     .shot img { width: 100%; height: 100%; object-fit: contain; border-radius: 26px; }
-
+ 
     /* Tiers */
     .tiers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1080px; }
     .tier { background: #fff; border-radius: 16px; padding: 30px; border: 1px solid #e3edeb; }
@@ -119,7 +124,7 @@
     .tier .price { color: var(--sea); font-weight: 800; margin: 0 0 14px; }
     .tier ul { margin: 0; padding-left: 20px; color: var(--muted); }
     .tier li { margin-bottom: 8px; }
-
+ 
     /* Waitlist */
     .waitlist { background: var(--sea); color: #fff; text-align: center; }
     .waitlist h2 { color: #fff; }
@@ -136,30 +141,30 @@
     }
     button:hover { transform: translateY(-2px); }
     .fine { font-size: 0.85em; opacity: 0.75; margin-top: 14px; }
-
+ 
     /* Footer */
     footer { background: #0e3535; color: #cfe0de; text-align: center; padding: 36px 20px; }
     footer nav { margin-bottom: 14px; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
     footer a { color: #fff; text-decoration: none; font-weight: 700; }
     footer a:hover { text-decoration: underline; }
     footer p { margin: 4px 0; font-size: 0.9em; }
-
+ 
     @media (prefers-reduced-motion: reduce) {
       .badge, button { transition: none; }
     }
-
+ 
     .social-links {
   display: flex;
   justify-content: center;
   gap: 16px;
   margin: 12px 0;
 }
-
+ 
 .social-links a {
   color: #f0f7f6;
   transition: opacity 0.2s;
 }
-
+ 
 .social-links a:hover {
   opacity: 0.7;
 }
